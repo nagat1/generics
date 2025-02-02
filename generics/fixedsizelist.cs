@@ -6,35 +6,35 @@ using System.Threading.Tasks;
 
 namespace generics
 {
-    internal class fixedsizelist
+    public class fixedsizelist
     {
-        public int capasity{get;set;}
+        public int capasity { get; set; }
         public fixedsizelist(int _capasity)
         {
             capasity = _capasity;
         }
-        //public void addFixedSizeList<T>()
-        //{
-        //    Console.WriteLine("enter array size");
-        //    int size = int.Parse(Console.ReadLine());
+        public void addFixedSizeList<T>(T[] list)
+        {
+            Console.WriteLine("enter array size");
+            int size = int.Parse(Console.ReadLine());
 
-        //    string message = "you excceded the limit";
-        //    T[] list = new T[size];
-        //    if (size > capasity)
+            string message = "you excceded the limit";
+            //T[] list = new T[size];
+            if (size > capasity)
 
-        //        throw new Exception(message);
+                throw new Exception(message);
 
-        //    for (int i = 0; i < size; i++)
-        //    {
+            //for (int i = 0; i < size; i++)
+            //{
 
-        //        Console.WriteLine($"enter element{i + 1}");
+            //    Console.WriteLine($"enter element{i + 1}");
 
-        //        T x = T.Parse(Console.ReadLine());
+            //    T x = T.Parse(Console.ReadLine());
 
-        //        list[i] = x;
+            //    list[i] = x;
 
-        //    }
-        //    foreach (T item in list) { Console.WriteLine(item); }
-        //}
+            //}
+            foreach (T item in list) { Console.WriteLine(item); }
+        }
     }
 }

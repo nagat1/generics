@@ -116,8 +116,13 @@ namespace generics
             //4.Implement a Get method that retrieves an element at a specific index
             //in the list but throws an exception for invalid indices.
             ///////////////////////////////////////
-            //fixedsizelist list = new fixedsizelist(10);
-            //list.addFixedSizeList<int>();
+            fixedsizelist list = new fixedsizelist(10);
+            //int[] arr = { 1, 2, 3, 4 };
+            //list.addFixedSizeList<int>(arr);
+            //string[] arr2 = { "ali","soha" };
+            //list.addFixedSizeList<string>(arr2);
+            point[] arr3 = {new point(1,2),new point(4,5)};
+            list.addFixedSizeList<point>(arr3);
             #endregion
 
             #region 6
